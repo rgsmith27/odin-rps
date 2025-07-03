@@ -1,5 +1,6 @@
-let computerScore = 0;
 let humanScore = 0;
+let computerScore = 0;
+
 
 function getComputerChoice(){
     let rng = Math.random();
@@ -88,4 +89,21 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-playRound(getHumanChoice(),getComputerChoice());
+function playGame(){
+    for(let i = 0; i < 5; i++){
+        let humanChoice = getHumanChoice();
+        let computerChoice =  getComputerChoice();
+        playRound(humanChoice, computerChoice);
+    }
+    if(computerScore > humanScore){
+        console.log("The computer wins. It was inevitable, anyway.");
+    }
+    if(humanScore > computerScore){
+        console.log("The human wins, but like all human victories, it is ultimately fleeting.");
+    }
+    else{
+        console.log("A tied game. How boring.")
+    }
+}
+
+playGame();
