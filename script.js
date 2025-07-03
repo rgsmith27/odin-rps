@@ -1,3 +1,6 @@
+let computerScore = 0;
+let humanScore = 0;
+
 function getComputerChoice(){
     let rng = Math.random();
     if (rng > .66){
